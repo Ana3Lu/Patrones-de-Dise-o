@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class OrderFood extends Order
 {
-    public OrderFood(int id, String type, String name, String direction, Date date, int quantity) {
-        super(id, type, name, direction, date, quantity);
+    public OrderFood(int id, String nameUser, String address, Date date) {
+        super(id, "Food", nameUser, address, date);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class OrderFood extends Order
     @Override
     protected void prepareOrder() {
         // prepare order
-        System.out.println("Preparing " + getType() + " order for " + getName());
+        System.out.println("Preparing " + getType() + " order for " + getNameUser());
     }
 
     @Override

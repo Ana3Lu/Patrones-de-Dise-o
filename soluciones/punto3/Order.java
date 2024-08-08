@@ -6,20 +6,20 @@ public abstract class Order
 {
     private int id;
     private String type;
-    private String name;
-    private String direction;
+    private String nameUser;
+    private String address;
     private Date date;
-    private int quantity;
     private double total;
+    private ArrayList<Product> products;
 
-    public Order(int id, String type, String name, String direction, Date date, int quantity) {
+    public Order(int id, String type, String nameUser, String address, Date date) {
         this.id = id;
         this.type = type;
-        this.name = name;
-        this.direction = direction;
+        this.nameUser = nameUser;
+        this.address = address;
         this.date = date;
-        this.quantity = quantity;
         this.total = calculateCost();
+        this.products = new ArrayList<Product>();
     }
 
     public int getId() {
@@ -30,28 +30,33 @@ public abstract class Order
         return type;
     }
 
-    public String getName() {
-        return name;
+    public String getNameUser() {
+        return nameUser;
     }
 
-    public String getDirection() {
-        return direction;
+    public String getAddress() {
+        return address;
     }
 
     public Date getDate() {
         return date;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
     public double getTotal() {
         return total;
     }
 
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
     public String toString() {
-        return "ID: " + id + "\nType: " + type + "\nName: " + name + "\nDirection: " + direction + "\nDate: " + date + "\nQuantity: " + quantity + "\nTotal: " + total;}
+        return "ID: " + id + "\nType: " + type + "\nName user: " + name + "\nAddress: " + address + "\nDate: " + date + "\nTotal: " + total + "\nProducts: " + products;
+    }
 
     // template method
     public final void processOrder() {
@@ -67,7 +72,7 @@ public abstract class Order
 
     protected void takeOrder() {
         // take order
-        System.out.println("punto3.Order taken for " + getName() + " of type " + getType());
+        System.out.println("Order taken for " + getNameUser() + " of type " + getType());
     }
 
     protected abstract boolean verifyDisponibility();
@@ -76,6 +81,6 @@ public abstract class Order
 
     protected void deliverOrder() {
         // deliver order
-        System.out.println("punto3.Order is being delivered to " + getDirection() + " for " + getName() + " of type " + getType());
+        System.out.println("Order is being delivered to " + getAddress() + " for " + getNameUser() + " of type " + getType());
     }
 }
