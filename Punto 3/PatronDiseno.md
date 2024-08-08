@@ -9,7 +9,7 @@ Se eligió este patrón de diseño de comportamiento para el problema de gestió
 Esto evita la duplicación de código y la mala práctica de tener un exceso de condicionales, fomentando el uso de polimorfismo.
 
 ## UML
-![Diagrama de clase](Punto 3/GestionRestaurantes.drawio.png)
+![Diagrama de clase](GestionRestaurantes.drawio.png)
 
 Como se puede observar en el diagrama anterior, la clase abstracta Order define una estructura común para el procesamiento de órdenes, donde establece unos atributos y métodos enfocados en la toma del pedido, la preparación, la verificación de disponibilidad, el total del pedido, entre otros. 
 
