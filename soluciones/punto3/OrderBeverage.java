@@ -1,11 +1,13 @@
 package punto3;
 
+import java.util.Date;
+
 public class OrderBeverage extends Order
 {
     private boolean withAlcohol;
 
-    public OrderBeverage(int id, String type, String name, String direction, Date date, double total, boolean withAlcohol) {
-        super(id, type, name, direction, date, total);
+    public OrderBeverage(int id, String type, String name, String direction, Date date, int quantity, boolean withAlcohol) {
+        super(id, type, name, direction, date, quantity);
         this.withAlcohol = withAlcohol;
     }
 
@@ -15,7 +17,7 @@ public class OrderBeverage extends Order
 
     @Override
     public String toString() {
-        super.toString() + "\nWith alcohol: " + withAlcohol;
+        return super.toString() + "\nWith alcohol: " + withAlcohol;
     }
 
     @Override
@@ -33,6 +35,6 @@ public class OrderBeverage extends Order
     @Override
     protected double calculateCost() {
         // calculate cost
-        return total;
+        return 0.0;
     }
 }

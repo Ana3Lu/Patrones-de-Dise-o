@@ -1,5 +1,7 @@
 package punto3;
 
+import java.util.Date;
+
 public abstract class Order
 {
     private int id;
@@ -7,15 +9,17 @@ public abstract class Order
     private String name;
     private String direction;
     private Date date;
+    private int quantity;
     private double total;
 
-    public Order(int id, String type, String name, String direction, Date date, double total) {
+    public Order(int id, String type, String name, String direction, Date date, int quantity) {
         this.id = id;
         this.type = type;
         this.name = name;
         this.direction = direction;
         this.date = date;
-        this.total = total;
+        this.quantity = quantity;
+        this.total = calculateCost();
     }
 
     public int getId() {
@@ -38,18 +42,22 @@ public abstract class Order
         return date;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
     public double getTotal() {
         return total;
     }
 
     public String toString() {
-        return "ID: " + id + "\nType: " + type + "\nName: " + name + "\nDirection: " + direction + "\nDate: " + date + "\nTotal: " + total;}
+        return "ID: " + id + "\nType: " + type + "\nName: " + name + "\nDirection: " + direction + "\nDate: " + date + "\nQuantity: " + quantity + "\nTotal: " + total;}
 
     // template method
     public final void processOrder() {
         takeOrder();
         if (verifyDisponibility()) {
-            preparateOrder();
+            prepareOrder();
             calculateCost();
             deliverOrder();
         } else {
@@ -66,7 +74,7 @@ public abstract class Order
     protected abstract void prepareOrder();
     protected abstract double calculateCost();
 
-    protected abstract void deliverOrder() {
+    protected void deliverOrder() {
         // deliver order
         System.out.println("punto3.Order is being delivered to " + getDirection() + " for " + getName() + " of type " + getType());
     }

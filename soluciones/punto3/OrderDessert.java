@@ -1,9 +1,11 @@
 package punto3;
 
+import java.util.Date;
+
 public class OrderDessert extends Order
 {
-    public OrderDessert(int id, String type, String name, String direction, Date date, double total) {
-        super(id, type, name, direction, date, total);
+    public OrderDessert(int id, String type, String name, String direction, Date date, int quantity) {
+        super(id, type, name, direction, date, quantity);
     }
 
     @Override
@@ -21,6 +23,6 @@ public class OrderDessert extends Order
     @Override
     protected double calculateCost() {
         // calculate cost
-        return total;
+        return 0.0;
     }
 }
