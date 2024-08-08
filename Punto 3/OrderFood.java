@@ -1,14 +1,19 @@
 public class OrderFood extends Order
 {
-    public OrderFood(String name, String direction, String date, double total)
-    {
-        super(name, direction, date, total);
+    public OrderFood(int id, String type, String name, String direction, Date date, double total) {
+        super(id, type, name, direction, date, total);
+    }
+
+    @Override
+    protected boolean verifyDisponibility() {
+        // verify availability
+        return true;
     }
 
     @Override
     protected void prepareOrder() {
         // prepare order
-        System.out.println("Order prepared");
+        System.out.println("Preparing " + getType() + " order for " + getName());
     }
 
     @Override

@@ -1,14 +1,31 @@
 public class OrderBeverage extends Order
 {
-    public OrderBeverage(String name, String direction, String date, double total)
-    {
-        super(name, direction, date, total);
+    private boolean withAlcohol;
+
+    public OrderBeverage(int id, String type, String name, String direction, Date date, double total, boolean withAlcohol) {
+        super(id, type, name, direction, date, total);
+        this.withAlcohol = withAlcohol;
+    }
+
+    public boolean isWithAlcohol() {
+        return withAlcohol;
+    }
+
+    @Override
+    public String toString() {
+        super.toString() + "\nWith alcohol: " + withAlcohol;
+    }
+
+    @Override
+    protected boolean verifyDisponibility() {
+        // verify availability
+        return true;
     }
 
     @Override
     protected void prepareOrder() {
-        // prepare order
-        System.out.println("Order prepared");
+        // prepare beverage order
+        System.out.println("Preparing " + getType() + " order for " + getName());
     }
 
     @Override
