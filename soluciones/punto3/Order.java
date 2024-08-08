@@ -82,6 +82,6 @@ public abstract class Order
 
     protected void deliverOrder() {
         // deliver order
-        System.out.println("Order is being delivered to " + getAddress() + " for " + getNameUser() + " of type " + getType());
+        System.out.println("Order is being delivered to " + getAddress() + " for " + getNameUser());
     }
 }
