@@ -1,3 +1,5 @@
+package punto3;
+
 public class Food extends Product
 {
     public Food(int id, String name, double price) {

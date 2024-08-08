@@ -1,3 +1,5 @@
+package punto3;
+
 public abstract class Product {
 
     private int id;

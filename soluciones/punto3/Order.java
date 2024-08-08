@@ -1,6 +1,7 @@
 package punto3;
 
 import java.util.Date;
+import java.util.ArrayList;
 
 public abstract class Order
 {
@@ -55,7 +56,7 @@ public abstract class Order
     }
 
     public String toString() {
-        return "ID: " + id + "\nType: " + type + "\nName user: " + name + "\nAddress: " + address + "\nDate: " + date + "\nTotal: " + total + "\nProducts: " + products;
+        return "ID: " + id + "\nType: " + type + "\nName user: " + nameUser + "\nAddress: " + address + "\nDate: " + date + "\nTotal: " + total + "\nProducts: " + products;
     }
 
     // template method
