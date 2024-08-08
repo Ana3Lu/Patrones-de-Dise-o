@@ -1,6 +1,8 @@
-public class OrderFood extends Order
+package punto3;
+
+public class OrderDessert extends Order
 {
-    public OrderFood(int id, String type, String name, String direction, Date date, double total) {
+    public OrderDessert(int id, String type, String name, String direction, Date date, double total) {
         super(id, type, name, direction, date, total);
     }
 

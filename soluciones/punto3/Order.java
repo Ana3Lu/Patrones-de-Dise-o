@@ -1,3 +1,5 @@
+package punto3;
+
 public abstract class Order
 {
     private int id;
@@ -57,7 +59,7 @@ public abstract class Order
 
     protected void takeOrder() {
         // take order
-        System.out.println("Order taken for " + getName() + " of type " + getType());
+        System.out.println("punto3.Order taken for " + getName() + " of type " + getType());
     }
 
     protected abstract boolean verifyDisponibility();
@@ -66,6 +68,6 @@ public abstract class Order
 
     protected abstract void deliverOrder() {
         // deliver order
-        System.out.println("Order is being delivered to " + getDirection() + " for " + getName() + " of type " + getType());
+        System.out.println("punto3.Order is being delivered to " + getDirection() + " for " + getName() + " of type " + getType());
     }
 }

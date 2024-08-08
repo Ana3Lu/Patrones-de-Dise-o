@@ -1,3 +1,5 @@
+package punto3;
+
 public class OrderBeverage extends Order
 {
     private boolean withAlcohol;
