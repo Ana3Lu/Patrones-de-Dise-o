@@ -10,7 +10,6 @@ public class Main {
 
         habitacion = new ChocolateDecorator(habitacion);
 
-        System.out.println("punto5.Habitacion: " +habitacion.getTipoHabitacion());
-        System.out.println("Precio total: "+habitacion.getPrecioHabitacion()+"en pesos colombianos");
+        System.out.println("Total: " + habitacion.calcularPrecio());
     }
 }

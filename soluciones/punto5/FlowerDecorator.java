@@ -1,17 +1,13 @@
 package punto5;
 
 public class FlowerDecorator extends HabitacionDecorator{
-    public FlowerDecorator(Habitacion habitacionDecorada) {
-        super(habitacionDecorada);
+    public FlowerDecorator(Habitacion habitacion) {
+        super(habitacion);
     }
 
     @Override
-    public String getTipoHabitacion(){
-        return super.getTipoHabitacion()+ ", Tulipanes";
-    }
-
-    @Override
-    public double getPrecioHabitacion(){
-        return super.getPrecioHabitacion() + 100.000;
+    public double calcularPrecio() {
+        System.out.println("Habitación con tulipanes");
+        return super.calcularPrecio() + 100000;
     }
 }

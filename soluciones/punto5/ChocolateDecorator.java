@@ -1,17 +1,14 @@
 package punto5;
 
 public class ChocolateDecorator extends HabitacionDecorator{
-    public ChocolateDecorator(Habitacion habitacionDecorada) {
-        super(habitacionDecorada);
+
+    public ChocolateDecorator(Habitacion habitacion) {
+        super(habitacion);
     }
 
     @Override
-    public String getTipoHabitacion(){
-        return super.getTipoHabitacion()+ ",To'ak chocolate";
-    }
-
-    @Override
-    public double getPrecioHabitacion(){
-        return super.getPrecioHabitacion()+200.000;
+    public double calcularPrecio() {
+        System.out.println("Habitación con chocolate To'ak ");
+        return super.calcularPrecio() + 50000;
     }
 }

@@ -1,19 +1,14 @@
 package punto5;
 
 public abstract class HabitacionDecorator implements Habitacion {
-    private Habitacion habitacionDecorada;
+    private Habitacion habitacion;
 
-    public HabitacionDecorator(Habitacion habitacionDecorada) {
-        this.habitacionDecorada = habitacionDecorada;
+    public HabitacionDecorator(Habitacion habitacion) {
+        this.habitacion = habitacion;
     }
 
     @Override
-    public double getPrecioHabitacion(){
-        return habitacionDecorada.getPrecioHabitacion();
-    }
-
-    @Override
-    public String getTipoHabitacion(){
-        return habitacionDecorada.getTipoHabitacion();
+    public double calcularPrecio() {
+        return habitacion.calcularPrecio();
     }
 }

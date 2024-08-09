@@ -1,14 +1,15 @@
 package punto5;
 
 public class HabitacionBasica implements Habitacion {
-    @Override
-    public String getTipoHabitacion() {
-        return "punto5.Habitacion Básica";
+    private final double precio;
+
+    public HabitacionBasica() {
+        this.precio = 400000;
     }
 
     @Override
-    public double getPrecioHabitacion() {
-        return 500.000;
+    public double calcularPrecio() {
+        System.out.println("habitación básica");
+        return this.precio;
     }
-
 }
