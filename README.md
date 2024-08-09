@@ -22,9 +22,13 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 # Solución punto 2
 
-## Patrón de Diseño para sistema de gestión de la decoración de habitaciones en el hotel
+## Patrón de Diseño para una App de mensajería en tiempo real
+
+El patrón de diseño seleccionado para cubrir las necesidades del problema: Observer (Patrón de comportamiento)
 
 ## Justificación
+
+Este patrón de diseño fue seleccionado debido a que permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando, para este caso, cada vez que un usuario recibe un nuevo mensaje, todos los dispositivos del usuario deben ser notificados para que el mensaje se muestre en cada uno de ellos, por lo que, los dispositivos serían los observadores. Además de esto, gracias al patrón Observer, es posible realizar modificaciones a los dispositivos del usuario sin afectar la lógica principal de la App, garantizando flexibilidad y es posible que exista desacoplamiento en la App, ya que, solo es necesario el nombre del dispositivo para simular la notificación en cada uno de estos.
 
 ## UML
 
@@ -33,7 +37,7 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 ## Patrón de Diseño para sistema de gestión de restaurantes
 
-El patron de diseño seleccionado para cubrir las necesidades del problema: Template Method
+El patrón de diseño seleccionado para cubrir las necesidades del problema: Template Method
 
 ## Justificación
 
