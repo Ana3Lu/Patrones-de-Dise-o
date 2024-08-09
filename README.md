@@ -24,11 +24,11 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 ## Patrón de Diseño para una App de mensajería en tiempo real
 
-El patrón de diseño seleccionado para cubrir las necesidades del problema: Observer (Patrón de comportamiento)
+El patrón de diseño seleccionado para cubrir las necesidades del problema es "Observer".
 
 ## Justificación
 
-Este patrón de diseño fue seleccionado debido a que permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando, para este caso, cada vez que un usuario recibe un nuevo mensaje, todos los dispositivos del usuario deben ser notificados para que el mensaje se muestre en cada uno de ellos, por lo que, los dispositivos serían los observadores. Además de esto, gracias al patrón Observer, es posible realizar modificaciones a los dispositivos del usuario sin afectar la lógica principal de la App, garantizando flexibilidad y es posible que exista desacoplamiento en la App, ya que, solo es necesario el nombre del dispositivo para simular la notificación en cada uno de estos.
+Este patrón de diseño de comportamiento fue seleccionado debido a que permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando, para este caso, cada vez que un usuario recibe un nuevo mensaje, todos los dispositivos del usuario deben ser notificados para que el mensaje se muestre en cada uno de ellos, por lo que, los dispositivos serían los observadores. Además de esto, gracias al patrón Observer, es posible realizar modificaciones a los dispositivos del usuario sin afectar la lógica principal de la App, garantizando flexibilidad y es posible que exista desacoplamiento en la App, ya que, solo es necesario el nombre del dispositivo para simular la notificación en cada uno de estos.
 
 ## UML
 ![Diagrama de clase](soluciones/punto2/UML Punto2.jpg).
@@ -37,7 +37,7 @@ Como se evidencia en el diagrama de clases, la interfaz observer envía el méto
 
 # Solución punto 3
 
-## Patrón de Diseño para sistema de gestión de restaurantes
+## Patrón de diseño para sistema de gestión de restaurantes
 
 El patrón de diseño seleccionado para cubrir las necesidades del problema es "Template Method".
 
@@ -50,7 +50,9 @@ Esto evita la duplicación de código y la mala práctica de tener un exceso de 
 ## UML
 ![Diagrama de clase](soluciones/punto3/GestionOrdenes.png)
 
-Como se puede observar en el diagrama anterior, la clase abstracta punto3.Order define una estructura común para el procesamiento de órdenes, donde establece unos atributos y métodos enfocados en la toma del pedido, la preparación, la verificación de disponibilidad, el total del pedido, entre otros.
+Como se puede observar en el diagrama anterior, la clase abstracta punto3.Order define una estructura común para el procesamiento de órdenes, donde establece unos atributos y métodos enfocados en la toma del pedido, la preparación, la verificación de disponibilidad, el total del pedido, entre otros. 
+
+Esta misma clase clase de punto3.Order maneja un ArrayList de tipo Product, en el cual se puede agregar las comidas, bebidas o postres según se indique de acuerdo al tipo de pedido, siendo todas estas clases independientes que extienden de la clase abstracta Product.
 
 De igual forma, se cuenta con clases que extienden de punto3.Order y que representan los tres tipos de pedidos que se manejan hasta el momento, las cuales son capaces de especificar sus propios comportamientos en ciertos métodos heredados como son la de verificar disponibilidad, preparar la orden y calcular el total del pedido.
 
@@ -73,8 +75,8 @@ Como se vislumbra en el diagrama de clases, se puede observar la clase abstracta
 
 # Solución punto 5
 
-## Patrón de Diseño para sistema de gestión de la decoración de habitaciones en el hotel
-El patrón de diseño que se escogió fue un patrón estructural denominado "Decorator" 
+## Patrón de diseño para sistema de gestión de la decoración de habitaciones en el hotel
+El patrón de diseño que se escogió fue un patrón estructural denominado "Decorator".
 
 
 ## Justificación 
