@@ -72,5 +72,5 @@ Este patrón permite separar la responsabilidad de cada mejora o adición que se
 Si en el futuro se quisiera agregar más mejoras como una cena romántica o un servicio de spa, se pueden crear nuevos decoradores sin necesidad de modificar las clases que ya existen, lo que sigue el principio Open/Closed, donde las clases están abiertas a extensión pero cerradas a modificación.
 
 ## UML
-![Diagrama de clase](soluciones/punto5/punto5_uml.png)
+![Diagrama de clase](soluciones/punto5/punto5-uml.drawio.png)
 
