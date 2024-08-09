@@ -20,7 +20,7 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 ### Patrón de diseño para sistema de gestión de restaurantes
 
-El patron de diseño seleccionado para cubrir las necesidades del problema: Template Method
+El patrón de diseño seleccionado para cubrir las necesidades del problema es Template Method.
 
 ### Justificación
 
@@ -38,6 +38,19 @@ De igual forma, se cuenta con clases que extienden de Order y que representan lo
 
 
 ## Solución punto 4
+
+# Patrón de diseño para sistema de gestión de tareas
+
+El patrón de diseño seleccionado para cubrir las necesidades del problema es Command.
+
+## Justificación
+
+Se ve adecuado implementar este patrón de diseño de comportamiento, ya que permite encapsular las acciones de comandos como crear, editar, completar y eliminar una tarea en objetos separados. Esto hace que se pueda trabajar con un intermediario que separa las acciones que los usuarios quieren realizar con la forma en que se ejecutan por detrás. De igual forma, facilita implementar operaciones de reversión y se está abierto a la expensión de nuevas funciones que se deseen incluir en el futuro sin la necesidad de modificar el código existente.
+
+## UML
+![Diagrama de clase](soluciones/punto4/GestionTareas.png)
+
+Como se vislumbra en el diagrama de clases, se puede observar la clase abstracta Command que se encarga de declarar un método execute() para ejecutar la operación que le indique el usuario desde la clase User, que actua como el Invoker, que mantiene una referencia a un objeto Command y lo ejecuta. A partir de Command se pueden extender comandos concretos como el de crear, editar, completar y eliminar tareas. Asimismo, esta clase abstracta se encuentra asociada a la clase TaskOperation, que es la que tiene la lógica de negocio para saber cómo realizar las operaciones sobre una tarea.
 
 
 ## Solución punto 5
