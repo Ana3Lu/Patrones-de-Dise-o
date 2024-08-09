@@ -89,3 +89,8 @@ Si en el futuro se quisiera agregar más mejoras como una cena romántica o un s
 ## UML
 ![Diagrama de clase](soluciones/punto5/DecoracionHabitacionesUML.png)
 
+Se puede evidenciar del diagrama que las clases de HabitacionDecorator y HabitacionBasica, implementan la interfaz de Habitación, es decir, evidencian una relación de implementación en donde las dos clases que implementan la interfaz se comprometen a definir los métodos que la interfaz declara.
+
+Por otro lado, se evidencia una relación de herencia (extends) entre la clase padre HabitacionDecorator y los demás decoradores, puesto que aquellos heredan los comportamientos (métodos) que tiene HabitacionDecorator.
+
+
