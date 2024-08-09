@@ -13,7 +13,7 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 # Solución punto 1
 
-## Patrón de Diseño para sistema de gestión de la decoración de habitaciones en el hotel
+## Patrón de diseño para sistema de gestión de la decoración de habitaciones en el hotel
 
 ## Justificación
 
@@ -22,7 +22,7 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 # Solución punto 2
 
-## Patrón de Diseño para una App de mensajería en tiempo real
+## Patrón de diseño para una App de mensajería en tiempo real
 
 El patrón de diseño seleccionado para cubrir las necesidades del problema es "Observer".
 
@@ -31,7 +31,7 @@ El patrón de diseño seleccionado para cubrir las necesidades del problema es "
 Este patrón de diseño de comportamiento fue seleccionado debido a que permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando, para este caso, cada vez que un usuario recibe un nuevo mensaje, todos los dispositivos del usuario deben ser notificados para que el mensaje se muestre en cada uno de ellos, por lo que, los dispositivos serían los observadores. Además de esto, gracias al patrón Observer, es posible realizar modificaciones a los dispositivos del usuario sin afectar la lógica principal de la App, garantizando flexibilidad y es posible que exista desacoplamiento en la App, ya que, solo es necesario el nombre del dispositivo para simular la notificación en cada uno de estos.
 
 ## UML
-![Diagrama de clase](soluciones/punto2/UML Punto2.jpg).
+![Diagrama de clase](soluciones/punto2/DesarrolloMensajeriaUML.jpg)
 
 Como se evidencia en el diagrama de clases, la interfaz observer envía el método update a las clases y es implementado por Device. Lo que demuestra que el patrón de diseño Observer se adecúa bastante bien frente a la aplicación de mensajería en tiempo real.
 
@@ -48,7 +48,7 @@ Se eligió este patrón de diseño de comportamiento para el problema de gestió
 Esto evita la duplicación de código y la mala práctica de tener un exceso de condicionales, fomentando el uso de polimorfismo.
 
 ## UML
-![Diagrama de clase](soluciones/punto3/GestionOrdenes.png)
+![Diagrama de clase](soluciones/punto3/GestionOrdenesUML.png)
 
 Como se puede observar en el diagrama anterior, la clase abstracta punto3.Order define una estructura común para el procesamiento de órdenes, donde establece unos atributos y métodos enfocados en la toma del pedido, la preparación, la verificación de disponibilidad, el total del pedido, entre otros. 
 
@@ -68,7 +68,7 @@ El patrón de diseño seleccionado para cubrir las necesidades del problema es "
 Se ve adecuado implementar este patrón de diseño de comportamiento, ya que permite encapsular las acciones de comandos como crear, editar, completar y eliminar una tarea en objetos separados. Esto hace que se pueda trabajar con un intermediario que separa las acciones que los usuarios quieren realizar con la forma en que se ejecutan por detrás. De igual forma, facilita implementar operaciones de reversión y se está abierto a la expensión de nuevas funciones que se deseen incluir en el futuro sin la necesidad de modificar el código existente.
 
 ## UML
-![Diagrama de clase](soluciones/punto4/GestionTareas.png)
+![Diagrama de clase](soluciones/punto4/GestionTareasUML.png)
 
 Como se vislumbra en el diagrama de clases, se puede observar la clase abstracta Command que se encarga de declarar un método execute() para ejecutar la operación que le indique el usuario desde la clase User, que actua como el Invoker, que mantiene una referencia a un objeto Command y lo ejecuta. A partir de Command se pueden extender comandos concretos como el de crear, editar, completar y eliminar tareas. Asimismo, esta clase abstracta se encuentra asociada a la clase TaskOperation, que es la que tiene la lógica de negocio para saber cómo realizar las operaciones sobre una tarea.
 
@@ -87,5 +87,5 @@ Este patrón permite separar la responsabilidad de cada mejora o adición que se
 Si en el futuro se quisiera agregar más mejoras como una cena romántica o un servicio de spa, se pueden crear nuevos decoradores sin necesidad de modificar las clases que ya existen, lo que sigue el principio Open/Closed, donde las clases están abiertas a extensión pero cerradas a modificación.
 
 ## UML
-![Diagrama de clase](soluciones/punto5/punto5-uml.drawio.png)
+![Diagrama de clase](soluciones/punto5/DecoracionHabitacionesUML.png)
 
