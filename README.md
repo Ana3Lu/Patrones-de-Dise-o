@@ -31,7 +31,9 @@ El patrón de diseño seleccionado para cubrir las necesidades del problema: Obs
 Este patrón de diseño fue seleccionado debido a que permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando, para este caso, cada vez que un usuario recibe un nuevo mensaje, todos los dispositivos del usuario deben ser notificados para que el mensaje se muestre en cada uno de ellos, por lo que, los dispositivos serían los observadores. Además de esto, gracias al patrón Observer, es posible realizar modificaciones a los dispositivos del usuario sin afectar la lógica principal de la App, garantizando flexibilidad y es posible que exista desacoplamiento en la App, ya que, solo es necesario el nombre del dispositivo para simular la notificación en cada uno de estos.
 
 ## UML
+![Diagrama de clase](soluciones/punto2/UML Punto2.jpg).
 
+Como se evidencia en el diagrama de clases, la interfaz observer envía el método update a las clases y es implementado por Device. Lo que demuestra que el patrón de diseño Observer se adecúa bastante bien frente a la aplicación de mensajería en tiempo real.
 
 # Solución punto 3
 
