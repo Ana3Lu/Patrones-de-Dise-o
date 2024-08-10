@@ -39,13 +39,4 @@ public class TaskManager {
         tasks.remove(name);
         System.out.println("Task deleted: " + name);
     }
-
-    public void undo(CommandHistory commandHistory) {
-        Command lastCommand = commandHistory.getLastCommand();
-        if (lastCommand != null) {
-            lastCommand.undo();
-            commandHistory.removeLastCommand();
-            System.out.println("Undo executed where last command was.");
-        }
-    }
 }

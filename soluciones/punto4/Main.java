@@ -16,9 +16,9 @@ public class Main {
         user.executeCommand();
 
         System.out.println("\nUndo operations:\n");
-        user.undoLastCommand();
-        user.undoLastCommand();
-        user.undoLastCommand();
-        user.undoLastCommand();
+        user.getCommandHistory().undoLastCommand();
+        user.getCommandHistory().undoLastCommand(); 
+        user.getCommandHistory().undoLastCommand();
+        user.getCommandHistory().undoLastCommand();
     }
 }
