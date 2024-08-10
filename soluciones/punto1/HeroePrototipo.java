@@ -1,38 +1,57 @@
 package punto1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 abstract class HeroePrototipo implements Heroe {
-    private String habilidades;
     private String nombre;
     private String aspectoVisual;
-    private String experiencia;
-    private String nivel;
-    private double puntos;
+    private double experiencia;
+    private int nivel;
+    private int puntos;
 
-    public HeroePrototipo(HeroePrototipo heroePrototipo) {
-        this.habilidades = heroePrototipo.habilidades;
-        this.nombre = heroePrototipo.nombre;
-        this.aspectoVisual = heroePrototipo.aspectoVisual;
-        this.experiencia = heroePrototipo.experiencia;
-        this.nivel = heroePrototipo.nivel;
-        this.puntos = heroePrototipo.puntos;
+   private List<String> listaHabilidades = new ArrayList<String>();
+
+
+    public HeroePrototipo(Heroe heroePrototipo) {
+        this.nombre = heroePrototipo.getNombre();
+        this.aspectoVisual = heroePrototipo.getAspectoVisual();
+        this.experiencia = heroePrototipo.getExperiencia();
+        this.nivel = heroePrototipo.getNivel();
+        this.puntos = heroePrototipo.getPuntos();
+        this.listaHabilidades = heroePrototipo.getListaHabilidades();
     }
 
-    public String getHabilidades() {
-        return habilidades;
+
+    public HeroePrototipo(String nombre, String aspectoVisual, double experiencia, int nivel, int puntos) {
+        this.nombre = nombre;
+        this.aspectoVisual = aspectoVisual;
+        this.experiencia = experiencia;
+        this.nivel = nivel;
+        this.puntos = puntos;
     }
 
-    public void setHabilidades(String habilidades) {
-        this.habilidades = habilidades;
+   public void agregarHabilidades(String habilidadEspecial){
+        this.listaHabilidades.add(habilidadEspecial);
+
+   }
+
+    public void borrarHabilidades(String habilidadEspecial){
+        this.listaHabilidades.remove(habilidadEspecial);
+
     }
 
+
+    @Override
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    @Override
     public String getAspectoVisual() {
         return aspectoVisual;
     }
@@ -41,27 +60,39 @@ abstract class HeroePrototipo implements Heroe {
         this.aspectoVisual = aspectoVisual;
     }
 
-    public String getExperiencia() {
-        return experiencia;
+    @Override
+    public double getExperiencia() {
+        return  experiencia;
     }
 
-    public void setExperiencia(String experiencia) {
+    public void setExperiencia(double experiencia) {
         this.experiencia = experiencia;
     }
-
-    public String getNivel() {
+    @Override
+    public int getNivel() {
         return nivel;
     }
 
-    public void setNivel(String nivel) {
+    public void setNivel(int nivel) {
         this.nivel = nivel;
     }
 
-    public double getPuntos() {
+    @Override
+    public int getPuntos() {
         return puntos;
     }
 
-    public void setPuntos(double puntos) {
+    public void setPuntos(int puntos) {
         this.puntos = puntos;
+    }
+
+   @Override
+    public List<String> getListaHabilidades() {
+        return listaHabilidades;
+    }
+
+    @Override
+    public HeroePrototipo clonar() {
+        return null;
     }
 }
