@@ -1,6 +1,6 @@
 package punto4;
 
-public class UndoCommand implements Command {
+public class UndoCommand {
     
     private TaskManager taskManager;
     
@@ -10,9 +10,5 @@ public class UndoCommand implements Command {
 
     public void execute(CommandHistory commandHistory) {
         taskManager.undo(commandHistory);
-    }
-
-    public void undo() {
-        // Undo the last command
     }
 }
