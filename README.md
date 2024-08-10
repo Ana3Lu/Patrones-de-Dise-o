@@ -13,12 +13,20 @@ Por medio de las carpetas que van del punto 1 al 5, se pueden encontrar los cód
 
 # Solución punto 1
 
-## Patrón de diseño para sistema de gestión de la decoración de habitaciones en el hotel
+## Patrón de diseño para sistema de clonación de personajes en un videojuego de aventuras
+
+El patrón de diseño seleccionado para desarrollar este ejercicio fue el de "Prototype".
 
 ## Justificación
 
-## UML
+El patrón "Prototype" del grupo de patrones creacionales fue seleccionado puesto que en este ejercicio se busca clonar heroes existentes para crear nuevos personajes con habilidades idénticas. 
+Teniendo en cuenta que se deben crear instancias de objetos que comparten la misma estructura o configuración inicial, este patrón permite crear clones rápidamente sin necesidad de volver a configurar cada objeto desde cero. Además, ofrece la flexibilidad de modificar atributos individuales de los clones sin afectar al prototipo original, lo que facilita la creación y la personalización de varios personajes en el juego, buscando optimizar tanto el rendimiento como la gestión del código.
 
+
+## UML
+![Diagrama de clase](soluciones/punto1/ClonacionPersonajesUML.drawio.png)
+
+Se puede evidenciar que el patrón de diseño del tipo "Prototype" no genera un diagrama de clases complejo puesto que este se compone de una interfaz implementada por una clase abstracta que a su vez es extendida por subclases que utilizan el método clonar sin requerir de la interfaz inicial sino copiando el objeto. 
 
 # Solución punto 2
 
