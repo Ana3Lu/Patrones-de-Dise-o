@@ -80,7 +80,7 @@ Se ve adecuado implementar este patrón de diseño de comportamiento, ya que per
 
 Como se vislumbra en el diagrama de clases, se puede observar la interfaz Command que se encarga de declarar los métodos execute() y undo para así ejecutar la operación que le indique el usuario desde la clase User, que actua como el Invoker del sistema, el cual mantiene una referencia a un objeto Command y lo ejecuta, junto con el de commandHistory y undoCommand. 
 
-A partir de Command se pueden extender comandos concretos como el de crear, editar, completar y eliminar tareas, las cuales se ven asociadas con la clase TaskManager, la cual tiene una pila de tareas y es la que tiene la lógica de negocio para saber cómo se deben realizar las operaciones sobre una tarea y que se relaciona con UndoCommand para manejar el tema de reversión de las funciones, junto a la de CommandHistory que lleva el registro.
+A partir de Command se pueden implementar comandos concretos como el de crear, editar, completar y eliminar tareas, las cuales se ven asociadas con la clase TaskManager, la cual tiene una pila de tareas y es la que tiene la lógica de negocio para saber cómo se deben realizar las operaciones sobre una tarea y que se relaciona con CommandHistory para manejar el tema de reversión de las funciones y llevar el registro.
 
 
 # Solución punto 5
